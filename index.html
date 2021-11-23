@@ -53,7 +53,7 @@ var map = L.map('map', {layers:[light]}).fitWorld();
     L.marker(e.latlng).addTo(map)  //this adds a marker at the lat and long returned by the locate function.
         .bindPopup("You are within " + Math.round(radius * 3.28084) + " feet of this point").openPopup(); //this binds a popup to the marker. The text of the popup is defined here as well. Note that we multiply the radius by 3.28084 to convert the radius from meters to feet and that we use Math.round to round the conversion to the nearest whole number.
 
-        if (radius <= 100) {
+        if (radius <= 328.084) {
           L.circle(e.latlng, radius,
             {color: 'green'}).addTo(map);
       }
