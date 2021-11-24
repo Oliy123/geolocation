@@ -85,7 +85,7 @@ var currentTime = new Date().getHours();
 
     map.on('locationerror', onLocationError);
 
-            map.locate({setView: true, maxZoom: 16});
+            
             //layercontroller
           var baseMaps = {
               "dark": dark,
@@ -104,9 +104,8 @@ var currentTime = new Date().getHours();
 
           var helloPopup = L.popup().setContent('Hello World!');
 
-L.easyButton('fa-globe', function(btn, map){
-    helloPopup.setLatLng(map.getCenter()).openOn(map);
-}).addTo(map);
+          function locate(){map.locate({setView: true, maxZoom: 16})};
+          L.easyButton('<oli.png/>',locate ).addTo(map);
 
 
 
