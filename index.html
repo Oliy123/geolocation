@@ -64,18 +64,18 @@ var map = L.map('map', {layers:[light]}).fitWorld();
 
 
       var times = SunCalc.getTimes(new Date(), e.latitude, e.longitude);
-var sunrise = times.sunrise.getHours();
-var sunset = times.sunset.getHours();
+      var sunrise = times.sunrise.getHours();
+      var sunset = times.sunset.getHours();
 
-var currentTime = new Date().getHours();
-    if (sunrise < currentTime && currentTime < sunset){
-      map.removeLayer(dark);
-      map.addLayer(light);
-    }
-    else {
-      map.removeLayer(light);
-      map.addLayer(dark);
-    }};
+      var currentTime = new Date().getHours();
+        if (sunrise < currentTime && currentTime < sunset){
+          map.removeLayer(dark);
+          map.addLayer(light);
+        }
+        else {
+          map.removeLayer(light);
+          map.addLayer(dark);
+        }};
 
 
     map.on('locationfound', onLocationFound); //this is the event listener
@@ -83,7 +83,7 @@ var currentTime = new Date().getHours();
       alert(e.message);
     }
 
-  
+
 
 
             //layercontroller
@@ -98,7 +98,7 @@ var currentTime = new Date().getHours();
 
 
           $("document").ready( function () {
-              alert("This location information is for study purposes, and the data will be disposable once that task is completed. We do not use or share your geolocation or device data for advertising or selling to another party unless you give us your express permission.");
+              alert("this web page asks you to allow your location; this information is only for educational purposes, and the data will be disposable once that task is completed. We do not use or share your geolocation or device data for advertising or selling to another party unless you give us your express permission.");
           });
 
 
