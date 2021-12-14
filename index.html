@@ -115,7 +115,7 @@ var map = L.map('map', {layers:[light]}).fitWorld();
       alert(e.message);
     }
 
-
+map.locate({setView: true, maxZoom: 16})
 
 
             //layercontroller
@@ -136,8 +136,6 @@ var map = L.map('map', {layers:[light]}).fitWorld();
 
 
 
-          function locate(){map.locate({setView: true, maxZoom: 16})};
-          L.easyButton('<oli.png/>',locate ).addTo(map);
 
 
 
